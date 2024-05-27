@@ -6,32 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oss_mypage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/7a56aab16a.js" crossorigin="anonymous"></script>
+    <script defer src="js/comment.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
-    <div class="intro">
-        <div class="title">
-            <h1>my page</h1>
+    <nav>
+        <div class="nav">
+            <div class="title">
+                <h1>my page</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#intro">ABOUT</a></li>
+                <li><a href="#com">COMMENT</a></li>
+            </ul>
         </div>
-        <p>p test 글씨</p>
-        <p>광운대학교</p>
-        <p>정보융합학부 2020204059 김소연</p>
-        <p>목표</p>
-        <p>웹 프론트엔드 개발자</p>
-        <p>취미</p>
-        <p>음악감상, 유튜브 시청</p>
+    </nav>
 
-    </div>
-    <div class="comment">
-        <p>방명록</p>
-    </div>
-
-    <footer>
-        <div class="footer">
-            <p>contact</p>
-            <a href="https://github.com/dhdld">github</a>
+    <div id="intro" class="intro">
+        <div class="background">
+            <h2>👋 안녕하세요</h2>
+            <p>광운대학교 정보융합학부 재학 중인 김소연입니다.</p>
+            <br />
+            <p class="subtitle">목표</p>
+            <p>웹 프론트엔드 개발자</p>
+            <br />
+            <p class="subtitle">취미</p>
+            <p>음악 감상, 유튜브 시청</p>
+            <div class="musicBox">
+                <p>좋아하는 노래 </p>
+                <a href="https://youtu.be/RowlrvmyFEk?si=U6OuGRrLDj2BG2_J" target="_blank"><i
+                        class="fa-brands fa-youtube"></i> music</a>
+            </div>
         </div>
-    </footer>
+        <div class="ctrlImg">
+            <p class="subtitle">🐶 반려동물 - 겨울이</p>
+            <button class="hideImg">^ 사진 숨기기</button>
+            <button class="showImg">^ 사진 보기</button>
+        </div>
+        <div class="Imgs">
+            <div class="dog" id="dog">
+                <img src="./img/겨울이.jpg" alt="dog">
+            </div>
+            <div class="dog" id="dog">
+                <img src="./img/겨울이1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="0.9"
+            d="M0,256L26.7,229.3C53.3,203,107,149,160,144C213.3,139,267,181,320,218.7C373.3,256,427,288,480,293.3C533.3,299,587,277,640,250.7C693.3,224,747,192,800,202.7C853.3,213,907,267,960,250.7C1013.3,235,1067,149,1120,106.7C1173.3,64,1227,64,1280,85.3C1333.3,107,1387,149,1413,170.7L1440,192L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
+        </path>
+    </svg>
+
+
+    <div id="com" class="commentBox">
+        <h2>방명록</h2>
+
+        <form action="/">
+            <input type="text" class="input_name" placeholder="이름">
+            <div class="input_div">
+                <input type="text" class="input_contents" placeholder="댓글을 남겨주세요.">
+                <button type="submit" class="comment_submit">등록</button>
+            </div>
+        </form>
+        <div class="comments_container"></div>
+    </div>
+
+    <div>
+        <footer>
+            <div class="footer">
+                <div class="foot">
+                    <p>contact </p>
+                    <a href="" class="contact"><i class="fa-regular fa-envelope"></i> btj5420@naver.com
+                    </a>
+                </div>
+                <div class="foot">
+                    <p>github </p>
+                    <a href="https://github.com/dhdld" target="_blank" class="contact"><i
+                            class="fa-brands fa-github"></i> dhdld</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

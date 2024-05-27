@@ -1,45 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-}
-
-.title {
-    margin-top: 20px;
-    padding-left: 200px;
-    transition: opacity 0.5s;
-}
-
-.title:hover {
-    color: red;
-    opacity: 0.5;
-}
-
-.intro {
-    height: 250px;
-
-}
-
-.comment {
-    margin-top: 100px;
-    padding-left: 200px;
-    height: 250px;
-
-    border-bottom: 1px solid black;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
+    font-family: "Nanum Gothic", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: blue;
+}
 
+ul, ol {
+    list-style: none;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.title{ 
+    color: #444;
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+}
+.menu {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a{
+    display: block;
+    padding: 20px 40px;
+    color: #555;
+    transition: all 0.4s;
+}
+
+.menu li a:hover {
+    background-color: #0099ff;
+    color: white;
+}
+
+.wave path:hover {
+    stroke-dashoffset: 1000;
+    stroke: #0099ff;
+    fill: transparent;
+    stroke-width: 2;
+}
+
+.wave path {
+    stroke-dashoffset: -2000;
+    stroke-dasharray: 5;
+    transition: all 3s;
+}
+
+.intro {
+    width: 100%;
+    padding: 3% 10%;
+    perspective: 500px;
+}
+
+.background {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    width: 80%;
+    height: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0.8;
+    transition: all 0.5s;
+    margin-bottom: 10px;
+}
+
+.background:hover {
+    transform: rotateX(15deg);
+}
+
+.background {
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    }
+    100% {
+        background-image: linear-gradient(120deg, #fda085 0%, #f6d365 100%);
+    }
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+.musicBox {
+    display: flex;
+    align-items: center;
+}
+.musicBox a:hover {
+    color: red;
+}
+
+.Imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dog {
+    width: 200px;
+    position: relative;
+    margin: 10px;
+}
+
+.dog img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dog img:hover {
+    opacity: 0.5;
+}
+
+.ctrlImg {
+    display: flex;
+    align-items: center;
+}
+
+.hideImg {
+    margin-left: 10px;
+    border: none;
+    background-color: #888;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.showImg {
+    margin-left: 10px;
+    border: none;
+    background-color: #888;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+.commentBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 80px;
+    background-color: rgb(196, 196, 196);
+}
+.input_div {
+    display: flex;
+    align-items: center;
+}
+input {
+    width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+.input_name {
+    width: 150px;
+}
+
+.comment_submit {
+    margin: 10px 10px;
+    padding: 8px 10px;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: rgb(124, 124, 124);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.comment {
+    width: 600px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid rgb(124, 124, 124);
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.comment_contents{
+    margin: 15px 0;
+
+}
+
+.name_div {
+    display: flex;
+}
+
+.delete_btn {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: rgb(124, 124, 124);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.delete_btn:hover {
+    background-color: red;
+}
+
+
+.footer {
+    padding-left: 5vw;
+    height: 130px;
+    background-color: rgb(124, 124, 124);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.foot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.footer p {
+    font-size: 1.2em;
+    margin-right: 20px;
+    width: 60px;
+}
+
+.footer .contact {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+.footer a:hover {
+    color: purple;
 }
 
 @media screen and (max-width: 600px) {
