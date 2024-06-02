@@ -48,7 +48,7 @@ function renderComments(comments) {
 
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete_btn');
-        deleteBtn.innerText = '삭제';
+        deleteBtn.innerText = 'x';
         deleteBtn.addEventListener('click', () => {
             deleteComment(comment.id);
         });
