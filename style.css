@@ -42,6 +42,7 @@ nav {
 
 .menu li {
     float: left;
+    margin: 0;
 }
 
 .menu li a{
@@ -52,7 +53,7 @@ nav {
 }
 
 .menu li a:hover {
-    background-color: #0099ff;
+    background-color: #8a8a8a;
     color: white;
 }
 
@@ -72,22 +73,23 @@ nav {
 .intro {
     width: 100%;
     padding: 3% 10%;
-    perspective: 500px;
+    perspective: 600px;
 }
 
 .background {
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     width: 80%;
-    height: 300px;
+    height: 100px;
     padding: 10px;
     box-sizing: border-box;
     opacity: 0.8;
     transition: all 0.5s;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .background:hover {
-    transform: rotateX(15deg);
+    transform: rotateX(20deg);
+    transform: skewX(-15deg);
 }
 
 .background {
@@ -112,29 +114,48 @@ nav {
 .musicBox {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 .musicBox a:hover {
     color: red;
 }
 
 .Imgs {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    height: 170px;
 }
-.dog {
+.Imgs div {
     width: 200px;
-    position: relative;
     margin: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    
 }
 
-.dog img {
+ul {
+    display: flex;
+    margin: 0px 20px;
+}
+
+ul li {
+    color:#666666;
+    cursor: pointer;
+    margin-right: 20px;
+}
+ul li.on {
+    color:#2e57df;
+}
+.Imgs div.on {
+    opacity: 1;
+}
+
+.Imgs div img {
     width: 100%;
     object-fit: cover;
-    border-radius: 50%;
-}
-
-.dog img:hover {
-    opacity: 0.5;
+    border-radius: 30%;
 }
 
 .ctrlImg {

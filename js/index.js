@@ -1,16 +1,16 @@
-const hideImg = document.querySelector('.hideImg');
-const showImg = document.querySelector('.showImg');
+const btns = document.querySelectorAll('.dogBtns li');
+const Imgs = document.querySelectorAll('.Imgs div');
 
-const img = document.querySelectorAll('.dog');
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', (e) => {
+        activation(i, btns);
+        activation(i, Imgs);
+    });
+}
 
-hideImg.addEventListener('click', () => {
-    for (let i = 0; i < img.length; i++) {
-        img[i].style.display = 'none';
+function activation(index, list) {
+    for (let el of list) {
+        el.classList.remove('on');
     }
-});
-
-showImg.addEventListener('click', () => {
-    for (let i = 0; i < img.length; i++) {
-        img[i].style.display = 'block';
-    }
-});
+    list[index].classList.add('on');
+}
